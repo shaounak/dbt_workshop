@@ -23,6 +23,7 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
+  - "logs"
 
 
 # Configuring models
@@ -34,5 +35,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_profiler_test:
     # Config indicated by + and applies to all files under models/example/
+    materialized: table
     example:
-      +materialized: view
+      +materialized: table
