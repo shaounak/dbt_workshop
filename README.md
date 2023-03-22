@@ -60,10 +60,13 @@ code ~/.dbt/profiles.yml
 >**Note**: You need to make sure that port `5432` is exposed to the server port `5432` for the next set of steps when you start the postgres docker container. Second, you must also make sure that you initialize the your pipenv environment using the `pipenv shell` command or you might have to run the next set of steps using the `pipenv run <command>`.
 
 ## Testing the dbt connection using `dbt debug`
+
 Execute the following command on the terminal. If you see the output as `All checks passed!`, that means the settings in the connection profile in the home directory or your project directory worked.
 
 ```bash
 dbt debug
 ```
 
+>**Note**: If you want to make use of Snowflake or anyother database, you are welcome to make use of instead of the dockerized postgres. Just make sure to update your profile file accordingly.
 
+For the next set of steps visit the individual project folders.
