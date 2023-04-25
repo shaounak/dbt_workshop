@@ -1,0 +1,23 @@
+version: 2
+# Country,ISO-2-CODE,ISO-3-Code,ISO-M49
+seeds:
+  - name: country_codes
+    description: A mapping of Country with the ISO codes for the country
+    full_refresh: true
+    columns:
+      - name: Country_Name
+        tests:
+          - unique
+          - not_null
+      - name: ISO_2_CODE
+        tests:
+          - unique
+          - not_null
+      - name: ISO_3_CODE
+        tests:
+          - unique
+          - not_null
+      - name: ISO_3_M49
+        tests:
+          - unique
+          - not_null
