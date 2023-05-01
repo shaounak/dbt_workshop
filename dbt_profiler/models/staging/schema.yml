@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: stg_customers
+    description: |
+      "Represents a customer."
+
+      `dbt-profiler` results:
+
+      {{ doc("dbt_profiler__stg_customers") }}
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "First Name of the Customer"
+        tests:
+          - not_null
+      - name: last_name
+        description: "Last Name of the Customer"
+        tests:
+          - not_null

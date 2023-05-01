@@ -64,10 +64,11 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "pg_localhost",
-            "group": "local",
+            "name": "PG-LOCALHOST",
+            "group": "LOCALHOST",
             "database": "postgres",
-            "username": "postgres"
+            "username": "postgres",
+            "password": "AhGhah4n"
         }
     ]
 }
