@@ -10,6 +10,6 @@
     )
 }}
 
-select * from {{ source('int_cust_n_affl', 'int_customers') }}
+select * from {{ ref('int_customers') }}
 
 {% endsnapshot %}

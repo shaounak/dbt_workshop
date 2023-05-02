@@ -9,13 +9,9 @@
 {% set table_exists_idl = load_relation(ref('raw_customers_idl')) is not none %}
 {% set table_exists_delta = load_relation(ref('raw_customers_delta')) is not none %}
 
-{{ log("Raw Customers IDL Table Status: " ~ table_exists_idl, info=true) }}
-{{ log("Raw Customers Delta Table Status: " ~ table_exists_delta, info=true) }}
-
 {{ config(materialized='table', schema="int_cust_n_affl") }}
 
 with source_data as (
-
 
 {%- if table_exists_idl -%}
     {{ log("IDL table exists, creating the model using the IDL table", info=True) }}
