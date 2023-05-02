@@ -7,6 +7,7 @@ name = "pypi"
 dbt-core = "*"
 dbt-postgres = "*"
 dbt-snowflake = "*"
+sqlparse = "*"
 
 [dev-packages]
 
