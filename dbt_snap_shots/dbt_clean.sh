@@ -1,0 +1,1 @@
+pipenv run dbt clean

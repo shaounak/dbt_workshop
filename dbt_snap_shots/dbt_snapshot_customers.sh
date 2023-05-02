@@ -1,0 +1,1 @@
+dbt snapshot --select customers

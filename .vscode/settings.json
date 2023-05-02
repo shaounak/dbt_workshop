@@ -70,5 +70,6 @@
             "username": "postgres",
             "password": "AhGhah4n"
         }
-    ]
+    ],
+    "dbt.queryLimit": 1000
 }

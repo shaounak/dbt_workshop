@@ -26,14 +26,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 seeds:
   dbt_snap_shots:
+    +schema: staging
     customers:
       idl:
-        +pre-hook: "drop table if exists public.raw_customers_delta"
+        +pre-hook: "drop table if exists staging.raw_customers_delta"
         enabled: true
         tags: ["IDL", "Customer"]
         full_refresh: true
       delta:
-        +pre-hook: "drop table if exists public.raw_customers_idl"
+        +pre-hook: "drop table if exists staging.raw_customers_idl"
         enabled: true
         tags: ["Delta", "Customer"]
         full_refresh: true

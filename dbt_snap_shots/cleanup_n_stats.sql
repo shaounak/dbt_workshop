@@ -1,6 +1,7 @@
 drop schema if EXISTS snapshots CASCADE;
 drop schema if EXISTS int_cust_n_affl CASCADE;
 drop schema if EXISTS dwh_cust_n_affl CASCADE;
+drop schema if EXISTS staging CASCADE;
 DO $$
 DECLARE tabname RECORD;
 BEGIN FOR tabname IN (
