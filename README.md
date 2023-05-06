@@ -1,5 +1,5 @@
 # dbt_workshop
-Contains the sample projects using dbt
+Contains the sample projects using dbt.
 
 # Setup
 Using `pipenv` install `dbt-core`. Alongwith `dbt-core` you might need to install the adapter for database or the data warehouse you want to play with. We'll use docker to get the postgres image and use it as a database.
@@ -57,7 +57,7 @@ We can setup the connection details to our database in the profile.yml file whic
 code ~/.dbt/profiles.yml
 ```
 
->**Note**: You need to make sure that port `5432` is exposed to the server port `5432` for the next set of steps when you start the postgres docker container. Second, you must also make sure that you initialize the your pipenv environment using the `pipenv shell` command or you might have to run the next set of steps using the `pipenv run <command>`.
+>**Note**: You need to make sure that port `5432` is exposed to the server port `5432` for the next set of steps when you start the postgres docker container. Second, you must also make sure that you initialize the your pipenv environment using the `pipenv shell` command or you might have to run the next set of steps using the `pipenv run <command>`. Alternatively you can also run the `activate.sh` file upon cloning the repo or everytime you restart your machine and cd to this folder.
 
 ## Testing the dbt connection using `dbt debug`
 
