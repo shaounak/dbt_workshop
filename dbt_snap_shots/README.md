@@ -16,9 +16,10 @@ flowchart LR
 ### Using the starter project
 
 Try running the following commands:
-- dbt run
-- dbt test
-
+- `dbt seed --select customers.idl`
+- `dbt seed --select customers.delta`
+- `dbt run --select customers`
+- `dbt snapshot --select customers`
 
 
 ### Resources:
