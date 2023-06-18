@@ -8,6 +8,7 @@ dbt-core = "*"
 dbt-postgres = "*"
 dbt-snowflake = "*"
 sqlparse = "*"
+apache-superset = "*"
 
 [dev-packages]
 

@@ -70,3 +70,31 @@ dbt debug
 >**Note**: If you want to make use of Snowflake or anyother database, you are welcome to make use of instead of the dockerized postgres. Just make sure to update your profile file accordingly.
 
 For the next set of steps visit the individual project folders.
+
+# Installing Apache Superset
+
+- First identify what's the release version of your Ubuntu through the command `lsb_release -a`
+- Execute the following command to install all the dependencies if the version is `20.04`
+
+```bash
+sudo apt-get install build-essential libssl-dev libffi-dev python3-dev python3-pip libsasl2-dev libldap2-dev default-libmysqlclient-dev
+```
+
+- Install `apache-superset` using the command `pipenv install apache-superset`
+- Followed by the installation, activate the virtual environment and run the following commands
+
+```bash
+pipenv shell
+# Create an admin user in your metadata database (use `admin` as username to be able to load the examples)
+export FLASK_APP=superset
+superset fab create-admin
+
+# Load some data to play with
+superset load_examples
+
+# Create default roles and permissions
+superset init
+
+# To start a development web server on port 8088, use -p to bind to another port
+superset run -p 8088 --with-threads --reload --debugger
+```

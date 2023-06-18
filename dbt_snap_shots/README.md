@@ -17,9 +17,13 @@ flowchart LR
 
 Try running the following commands:
 - `dbt seed --select customers.idl`
+    - This will seed the IDL records for the customers. It'll drop the raw delta entity for the customers if there is any.
 - `dbt seed --select customers.delta`
+    - This will seed the delta records for the customers. It'll drop the raw IDL entity for the customers if there is any.
 - `dbt run --select customers`
+    - This will execute the model for customers.
 - `dbt snapshot --select customers`
+    - This will create the snapshot for the customer.
 
 
 ### Resources:

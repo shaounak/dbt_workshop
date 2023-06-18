@@ -1,72 +1,25 @@
 {
     "sqltools.connections": [
+        
         {
-            "authenticator": "SNOWFLAKE",
-            "ocspOptions": {
-                "ocspFailOpen": true
-            },
-            "snowflakeOptions": {
-                "clientSessionKeepAlive": true,
-                "clientSessionKeepAliveHeartbeatFrequency": 3600,
-                "role": "DMR_READWRITE"
-            },
             "previewLimit": 50,
-            "driver": "Snowflake",
-            "name": "SF-DMAX-LOCAL-DEV-AWS-DMU_ETL-DMRREADWRITE-DATAMAX_ETL@ZQA79924.US-EAST-1",
-            "group": "DataMAx-SF-Local",
-            "account": "ZQA79924.us-east-1",
-            "username": "dmu_etl",
-            "password": "Test1234",
-            "database": "datamax_etl",
-            "warehouse": "COMPUTE_WH"
-        },
-        {
-            "authenticator": "SNOWFLAKE",
-            "ocspOptions": {
-                "ocspFailOpen": true
-            },
-            "snowflakeOptions": {
-                "clientSessionKeepAlive": true,
-                "clientSessionKeepAliveHeartbeatFrequency": 3600,
-                "role": "DMR_READWRITE"
-            },
-            "previewLimit": 50,
-            "driver": "Snowflake",
-            "name": "SF-DMAX-LOCAL-DEV-AWS-DMU_ETL-DMRREADWRITE-DATAMAX_32698@ZQA79924.US-EAST-1",
-            "group": "DataMAx-SF-Local",
-            "account": "ZQA79924.us-east-1",
-            "username": "dmu_etl",
-            "password": "Test1234",
-            "database": "DATAMAX_32698",
-            "warehouse": "COMPUTE_WH"
-        },
-        {
-            "authenticator": "SNOWFLAKE",
-            "ocspOptions": {
-                "ocspFailOpen": true
-            },
-            "snowflakeOptions": {
-                "clientSessionKeepAlive": true,
-                "clientSessionKeepAliveHeartbeatFrequency": 3600
-            },
-            "previewLimit": 50,
-            "driver": "Snowflake",
-            "name": "SF-DMAX-LOCAL-DEV-AWS-DMU_ETL-DMRREADWRITE-DATAMAX_32698@ZQA79924.US-EAST-1",
-            "group": "DataMAx-SF-Local",
-            "account": "ZQA79924.us-east-1",
-            "username": "dmu_etl",
-            "password": "Test1234",
-            "database": "DATAMAX_32698",
-            "warehouse": "COMPUTE_WH"
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PG-LOCALHOST-POSTGRES",
+            "group": "LOCALHOST",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "AhGhah4n"
         },
         {
             "previewLimit": 50,
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "PG-LOCALHOST",
+            "name": "PG-LOCALHOST-SUPERSET",
             "group": "LOCALHOST",
-            "database": "postgres",
+            "database": "superset",
             "username": "postgres",
             "password": "AhGhah4n"
         }
