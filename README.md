@@ -33,10 +33,10 @@ docker run -it -d -e POSTGRES_PASSWORD=${PGPASSWORD} -p 5432:5432 --name messy_r
 
 # Creating a new project
 
-We will now create a new project using the `dbt init` command. Execute the same on the command line and provide the project name. The first project which we are going to create is `dbt_profiler_test`. Once the project is created you should be able to see a directory created with the project name.
+We will now create a new project using the `dbt init` command. Execute the same on the command line and provide the project name. The first project which we are going to create is `dbt_profiler_example`. Once the project is created you should be able to see a directory created with the project name.
 
 ```
-cd dbt_profiler_test
+cd dbt_profiler
 ```
 
 ## Installing dependencies

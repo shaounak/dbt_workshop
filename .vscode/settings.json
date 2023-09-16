@@ -1,17 +1,5 @@
 {
     "sqltools.connections": [
-        
-        {
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 5432,
-            "driver": "PostgreSQL",
-            "name": "PG-LOCALHOST-POSTGRES",
-            "group": "LOCALHOST",
-            "database": "postgres",
-            "username": "postgres",
-            "password": "AhGhah4n"
-        },
         {
             "previewLimit": 50,
             "server": "localhost",
@@ -22,6 +10,17 @@
             "database": "superset",
             "username": "postgres",
             "password": "AhGhah4n"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PG-LOCALHOST-POSTGRES",
+            "group": "LOCALHOST",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "weo5piCo"
         }
     ],
     "dbt.queryLimit": 1000

@@ -1,4 +1,4 @@
-Welcome to the `dbt-profiler-test` project!
+Welcome to the `dbt-profiler_example` project!
 
 ### Run the commands in the following order
 
@@ -20,9 +20,6 @@ The reason why the views will be created in your staging schema and not the tabl
 You can also run `dbt test` but that's not the intent of this project.
 
 We can now generate the docs for our project based on this sample data we seeded. Please follow the instructions in [this](https://github.com/data-mie/dbt-profiler) project. Please note that if you query the view `stg_customers_profile`, it should already get you the profiling information for your table.
-
-
-
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
