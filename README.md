@@ -51,10 +51,24 @@ Once you execute the `dbt deps` command, you should be able to see the directory
 
 ## Setting up the `profiles.yml` for our postgres connetion
 
-We can setup the connection details to our database in the profile.yml file which we can create in our projects directory or we can use one in the `~/.dbt` directory. For the simplified use case as ours we will use the one in the `~/.dbt` directory.
+We can setup the connection details to our database in the profile.yml file which we can create in our projects directory or we can use one in the `~/.dbt` directory.
+
+In our case as we are putting everything in this repo and the data is not very sensitive, when you have cloned this repo, you can notice the `.dbt` directory. There is a profile file which is already created n the `.dbt` directory.
+
+For more information on the profile file, please visit -
+
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+
+The parent directory for `profiles.yml` is determined using the following precedence:
+
+    1. `--profiles-dir` option
+    2. `DBT_PROFILES_DIR` environment variable
+    3. current working directory
+    4. `~/.dbt/` directory
 
 ```
-code ~/.dbt/profiles.yml
+export DBT_PROFILES_DIR="$(pwd)/.dbt"
+code ./.dbt/profiles.yml
 ```
 
 >**Note**: You need to make sure that port `5432` is exposed to the server port `5432` for the next set of steps when you start the postgres docker container. Second, you must also make sure that you initialize the your pipenv environment using the `pipenv shell` command or you might have to run the next set of steps using the `pipenv run <command>`. Alternatively you can also run the `activate.sh` file upon cloning the repo or everytime you restart your machine and cd to this folder.
